@@ -2,6 +2,8 @@ package robert.trening
 
 import spock.lang.Specification
 
+import static robert.trening.CalculateAlcohol.StandardDrink.ONEWINEGLASS
+
 class CalculateAlcoholImplTest extends Specification {
 
     def "drunkAlcoholTest"() {
@@ -9,7 +11,7 @@ class CalculateAlcoholImplTest extends Specification {
         def calculateAlcohol = new CalculateAlcoholImpl()
 
         when:
-        calculateAlcohol.drink(6, CalculateAlcohol.StandardDrink.ONEWINEGLASS)
+        calculateAlcohol.drink(6, ONEWINEGLASS)
 
         def drunkStandardDrink = calculateAlcohol.drunkAlcohol(7)
 
@@ -22,7 +24,7 @@ class CalculateAlcoholImplTest extends Specification {
         def calculateAlcohol = new CalculateAlcoholImpl()
 
         when:
-        calculateAlcohol.drink(6, CalculateAlcohol.StandardDrink.ONEWINEGLASS)
+        calculateAlcohol.drink(6, ONEWINEGLASS)
 
         def canIDrive = calculateAlcohol.canIDrive(7)
 
