@@ -1,1 +1,2 @@
 # AlcoTestBySpock
+mvn test
